@@ -1,0 +1,33 @@
+AULA ESTRUTURA I
+
+Comando "info break" para informar os breakspoints!
+Comando "del n°DoBreakPoint" deleta o breakpoint!
+Comando "display nomeVariavel" seja ela local ou global, informa o valor da variavel!
+
+----------------------FODA--------------------------------------------FODA-------------------------------------------------
+Comando "frame" 10 dentro do comando "backtrace full"! Voce volta a chamada na pilha de execução!!!!!!!!!!
+Se voce esta nesse frame 10 por exemplo, se voce executar o comando info locals por exemplo, ser ao comando naquele momento naquele frame!
+Comando "up" avança na pilha, Comando "down" ele volta na pilha! ASSIM VOCE CONSEGUE NAVEGAR ENTRE OS FRAMES SEM TER DE INFORMAR O NUMERO DO FRAME!
+#0 - "COMMAND 'down' "
+#1 --
+#2 ---
+#3 ----
+#4 -----
+#5 ------
+#6 -------
+#7 --------
+#8 ---------
+#9 ---------- "COMMAND 'up' "
+----------------------fimFODA--------------------------------------------fimFODA--------------------------------------------
+
+Comando "print" exibe o valor da varivel, já o comando "display" sempre exibira o valor da mesma!
+
+Comando undisplay n°Variavel (voce obtem esse numero com o comando "info display"), serve para remover a mostra da varivel repetidamente!
+
+COMANDO BREAK
+Podemos usar o comando break com uma condição, por exemplo olhe essa condição de parada:
+"break if nomeVariavel == 20" breakpoint se e somente se! (algo ocorrer)
+Esse comando executa uma condição Se nomeVariavel for == 20!
+Para deletar todos os breakpoints é preciso somente usar o comando "del break" (OBS: Como se trata de um comando radical ele pergunta se voce realmente deseja apagar todos os breakpoints.)!
+
+

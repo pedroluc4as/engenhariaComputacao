@@ -1,0 +1,24 @@
+📚️Stack  --> Pilha 🔋️
+
+print argv [0]
+usamos para mostrar na tela os valores dos argumentos
+da nossa função que no caso da aula de hoje é a função main com dois argumentos que possuem valores e acessamos por meio deste comando
+
+para executar o gdb codigos com argumentos na main utilizamos:
+gdb --args ./nome_arquivo
+
+O COMANDO ATOI SERVE PARA TRASNFORMAR UMA SEQUENCIA DE CARACTERES PARA UM INTEIRO!!!
+
+Falha de segmentacao é quando voce tenta pegar um endereço de memoria que nao é do programa.
+
+comando run quase nunca sera utilizado pois ele executa o codigo todo
+
+COMANDO backtrace PARA VISUALIZAR PILHA DE EXECUÇÃO
+quando utilizamos esse comando a função que estamos executando no momento é exibida no #0 que é o topo da nossa pilha!
+COMANDO backtrace full expande cada linha da nossa pilha!
+
+info break Informam todos os breaks points
+
+DEL n°(breakpoint) deleta o breakpoint
+
+a pilha de execução do nosso processo pode ser estourada! ela tem um limite. pois no caso da aula de hoje é um array com memória estática, e  nao com memoria alocada dinamicamente.

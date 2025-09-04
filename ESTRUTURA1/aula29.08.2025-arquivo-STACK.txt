@@ -1,0 +1,6 @@
+print argv [0]
+usamos para mostrar na tela os valores dos argumentos
+da nossa função que no caso da aula de hoje é a função main com dois argumentos que possuem valores e acessamos por meio deste comando
+
+para executar o gdb codigos com argumentos na main utilizamos:
+gdb --args ./nome_arquivo
