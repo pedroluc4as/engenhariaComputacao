@@ -1,9 +1,19 @@
-#include<iostream>
+Q1 Biblioteca
+Objetos
+Aluno, Emprestar e Livros.
 
-class 
-{
-private:
+Atributos
 
-public:
+Aluno: CPF, RA, DATA NASCIMENTO.
 
-};
+Emprestar: N° LIVRO, COR LIVRO, ESCOPO DO LIVRO.
+
+Livros: CAPA, COR, ANO PUBLICAÇÃO.
+
+
+Métodos
+
+Aluno: Armazena livros, armazena caixas 
+(de algo relacionado a biblioteca), organiza livros.
+
+Emprestar: Servem de apoio para algo, fornece 
