@@ -1,12 +1,12 @@
 Q1 Biblioteca
 Objetos
-Aluno, Emprestar e Livros.
+Aluno, Emprestimo e Livros.
 
 Atributos
 
 Aluno: CPF, RA, DATA NASCIMENTO.
 
-Emprestar: N° LIVRO, COR LIVRO, ESCOPO DO LIVRO.
+Emprestimo: N° LIVRO, COR LIVRO, ESCOPO DO LIVRO.
 
 Livros: CAPA, COR, ANO PUBLICAÇÃO.
 
@@ -16,7 +16,7 @@ Métodos
 Aluno: Nome (Aluno), Livro (Livro que foi emprestado) e 
 Prazo para devolução do livro.
 
-Emprestar: Registro do Emprestimo, Quanto tempo emprestar e
+Emprestimo: Registro do Emprestimo, Quanto tempo Emprestimo e
 Dia de devolução.
 
-Livro: Emprestar, Disponibilidade, Devolver.
+Livro: Emprestimo, Disponibilidade, Devolver.
