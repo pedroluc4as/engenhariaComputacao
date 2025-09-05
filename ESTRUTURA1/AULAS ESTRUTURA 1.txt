@@ -30,4 +30,37 @@ Podemos usar o comando break com uma condição, por exemplo olhe essa condiçã
 Esse comando executa uma condição Se nomeVariavel for == 20!
 Para deletar todos os breakpoints é preciso somente usar o comando "del break" (OBS: Como se trata de um comando radical ele pergunta se voce realmente deseja apagar todos os breakpoints.)!
 
+AULA 05.09
+
+PILHA OU STACK
+O sistema operacional limita a quantidade de memoria passível de alocação na pilha de execução das funções.
+
+HEAP
+Pode-se alocar toda a memória ainda disponível no computador!
+==================================================================
+ALOCAÇÃO ESTÁTICA NA PILHA (STACK)
+
+Quando falamos de pilha/stack estamos nos referindo a memória RAM.
+
+Dados locais e endereços de parâmetros estão sempre na pilha/stack.
+
+Os dados podem ser usados sem ponteiros.
+==================================================================
+ALOCAÇÃO DINÂMICA NA HEAP
+
+Armazenado na memória RAM
+
+Variáveis não dependem do escopo ( podem ser acessadas globalmente ) e devem ser liberadas manualmente.
+
+Alocação mais LENTA que a stack.
+
+Utiliza estrutura de dados do tipo heap. Os blocos são alocados sob demanda no heap.
+
+Pode sofrer fragmentação após sucessivas alocações e liberações de memória.
+
+Os dados são acessados por PONTEIROS.
+
+A alocação pode falhar se muita memória for solicitada
+
+Adequada para se utilizar quando não se sabe exatamente o quanto de espaço será alocado antes de compilar, ou esse espaço a alocar for muito grande
 
