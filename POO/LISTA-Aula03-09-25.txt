@@ -13,7 +13,10 @@ Livros: CAPA, COR, ANO PUBLICAÇÃO.
 
 Métodos
 
-Aluno: Armazena livros, armazena caixas 
-(de algo relacionado a biblioteca), organiza livros.
+Aluno: Nome (Aluno), Livro (Livro que foi emprestado) e 
+Prazo para devolução do livro.
 
-Emprestar: Servem de apoio para algo, fornece 
+Emprestar: Registro do Emprestimo, Quanto tempo emprestar e
+Dia de devolução.
+
+Livro: Emprestar, Disponibilidade, Devolver.

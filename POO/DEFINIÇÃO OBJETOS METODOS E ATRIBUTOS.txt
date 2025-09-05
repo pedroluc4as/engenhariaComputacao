@@ -1,0 +1,82 @@
+ métodos são o que? o que altera o objeto? e atributos sao caracteristicas dos objetos?
+
+Exatamente! Você pegou a ideia central. Vamos detalhar um pouco mais para solidificar o conceito.
+
+Atributos são as Características dos Objetos?
+
+Sim, perfeitamente. Atributos (também chamados de propriedades ou campos) são as informações, os dados, as características que definem o estado de um objeto. Eles são como as "variáveis" de um objeto.
+
+Pense em um objeto do mundo real, como um carro:
+
+    Objeto: Carro
+
+    Atributos (Características):
+
+        Cor
+
+        Marca
+
+        Modelo
+
+        Ano
+
+        Velocidade Atual
+
+No exercício da biblioteca , para o objeto 
+
+Livro, os atributos que você listou, como "Capa, cor, ano de publicação", são exatamente isso: as características do livro.
+
+Métodos são o quê?
+
+Métodos são as ações, os comportamentos ou as funções que um objeto pode executar. Se os atributos são os substantivos que descrevem o objeto, os métodos são os verbos que dizem o que ele pode fazer.
+
+Usando o mesmo exemplo do carro:
+
+    Objeto: Carro
+
+    Métodos (Ações):
+
+        ligar()
+
+        acelerar()
+
+        frear()
+
+        desligar()
+
+No exercício da loja online , um objeto 
+
+CarrinhoDeCompras poderia ter métodos como adicionarItem(), removerItem() e calcularTotal(), que são todas ações que ele pode realizar.
+
+O que altera o objeto?
+
+Você também acertou aqui! São os métodos que alteram os atributos (o estado) de um objeto.
+
+Um método geralmente é usado para ler ou modificar os atributos do próprio objeto. Essa é a maneira segura e organizada de interagir com o objeto.
+
+Vamos juntar tudo com o exemplo do carro:
+
+    Estado Inicial (Atributos):
+
+        velocidadeAtual = 0 km/h
+
+        motorLigado = Falso
+
+    Ação (Método): Chamamos o método ligar().
+
+        Esse método vai alterar o atributo motorLigado para Verdadeiro.
+
+        Novo Estado: motorLigado = Verdadeiro, velocidadeAtual = 0 km/h.
+
+    Outra Ação (Método): Chamamos o método acelerar(20).
+
+        Esse método vai alterar o atributo velocidadeAtual, somando 20 a ele.
+
+        Novo Estado: motorLigado = Verdadeiro, velocidadeAtual = 20 km/h.
+
+Em resumo:
+Conceito	Definição	Exemplo (Objeto Livro)
+Atributos	O que o objeto É. (Dados, características, estado)	titulo, autor, estaDisponivel
+Métodos	O que o objeto FAZ. (Ações, comportamentos)	emprestar(), devolver()
+
+O método emprestar() faz algo (a ação de emprestar) que altera um atributo (muda estaDisponivel de verdadeiro para falso). Seu raciocínio está totalmente correto.
