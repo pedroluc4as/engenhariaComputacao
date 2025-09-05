@@ -1,0 +1,1 @@
+CPF é uma string pois não precisamos fazer operações com esse dado pois ele se trata de um identificador.

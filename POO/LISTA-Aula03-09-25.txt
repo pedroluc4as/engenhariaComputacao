@@ -6,9 +6,9 @@ Atributos
 
 Aluno: CPF, RA, DATA NASCIMENTO.
 
-Emprestimo: N° LIVRO, COR LIVRO, ESCOPO DO LIVRO.
+Emprestimo: N° LIVRO, COR LIVRO, RA do ALUNO.
 
-Livros: CAPA, COR, ANO PUBLICAÇÃO.
+Livros: CAPA, COR, ANO PUBLICAÇÃO, ESCOPO DO LIVRO.
 
 
 Métodos
