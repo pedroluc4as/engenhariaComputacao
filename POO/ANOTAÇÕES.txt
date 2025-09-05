@@ -31,3 +31,7 @@ public:
 Os atributos mais importantes da classe tem que ser passado como parametros do Construtor.
 
 Garbage Collector = Coletor de Lixo (Pesquisar)
+
+Assinatura de uma função é o cabeçalho.
+EX:
+funcao(int parametro_1, int parametro_2)
