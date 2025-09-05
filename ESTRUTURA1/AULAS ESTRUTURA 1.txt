@@ -62,5 +62,7 @@ Os dados são acessados por PONTEIROS.
 
 A alocação pode falhar se muita memória for solicitada
 
-Adequada para se utilizar quando não se sabe exatamente o quanto de espaço será alocado antes de compilar, ou esse espaço a alocar for muito grande
+Adequada para se utilizar quando não se sabe exatamente o quanto de espaço será alocado antes de compilar, ou esse espaço a alocar for muito grande.
+
+Geralmente possui um tamanho máximo predeterminado quando o programa inicia.
 
