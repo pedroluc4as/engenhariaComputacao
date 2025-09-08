@@ -66,3 +66,9 @@ Adequada para se utilizar quando não se sabe exatamente o quanto de espaço ser
 
 Geralmente possui um tamanho máximo predeterminado quando o programa inicia.
 
+
+============================================================================================================================================================================================
+
+PONTEIROS E ALOCAÇÃO DINÂMICA : malloc e calloc
+
+Na biblioteca stdlib.h 
