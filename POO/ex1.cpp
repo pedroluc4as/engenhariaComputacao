@@ -16,20 +16,21 @@ private:
 public:
     //construtor é sempre o mesmo nome da classe 
     //com letra maiscula e tem essa cara ai embaixo, com essas chaves
-    Livro(string isbn, string titulo, string autor) : isbn(move(isbn)), titulo(move(titulo)), autor(move(autor)) {}
+    Livro(string isbn, string titulo, string autor) : isbn(std::move(isbn)), titulo(std::move(titulo)), autor(std::move(autor)) {}
     bool estaDisponivel() const { return disponivel; }
 //alt+shift+seta para baixo para duplicar
 
     void marcarIndisponivel() { disponivel = false; }
-    void marcarIndisponivel() { disponivel = true; }
+    void marcarDisponivel() { disponivel = true; }
 
+    string getTitulo(){ return titulo; }
 };
 
 class Aluno {
 private:
     string ra, nome;
 public:
-     Aluno(string ra, string nome) : ra(move(ra)), nome(move(nome)) {}
+     Aluno(string ra, string nome) : ra(std::move(ra)), nome(std::move(nome)) {}
 
      string getNome(){ return nome;}
 };
@@ -44,26 +45,41 @@ private:
 public:
     //construtor
     Emprestimo(Livro *livro, Aluno* aluno, string dataSaida, string dataPrevista) 
-    : livro(livro), aluno(aluno), dataSaida(move(dataSaida)), dataPrevista(move(dataPrevista)){}
+    : livro(livro), aluno(aluno), dataSaida(std::move(dataSaida)), dataPrevista(std::move(dataPrevista)){}
 
     bool confirmar()
     {
-        if(livro && livro->estaDisponivel()){
+        if (livro && livro->estaDisponivel()){
             livro->marcarIndisponivel();
             return true;
         }
         return false;
     }
 
-    bool devolver()
+    void devolver(string dataDevolucao)
     {
-        if(livro && livro->marcarIndisponivel()){
-            livro->estaDisponivel();
-            return true;
+        if (livro)
+        {
+            livro->marcarDisponivel();
+            cout << "Liro '" << livro->getTitulo() << "' devolvido em " << dataDevolucao << "\n";
         }
-        return false;
 
-        
     }
-
 };
+
+void test_biblioteca()
+{
+    cout << "--- Biblioteca --- \n";
+    Livro livro("789-190292", "Prog. Orientada a Objeto", "IFMS");
+    Aluno aluno("2025001", "Pedro");
+
+    Emprestimo emprestimo(&livro, &aluno, "2025-09-09", "2025-09-15");
+    emprestimo.confirmar();
+};
+
+int main()
+{
+    test_biblioteca();
+    return 0;
+
+}
