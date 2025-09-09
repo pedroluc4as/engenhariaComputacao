@@ -61,7 +61,7 @@ public:
         if (livro)
         {
             livro->marcarDisponivel();
-            cout << "Liro '" << livro->getTitulo() << "' devolvido em " << dataDevolucao << "\n";
+            cout << "Livro '" << livro->getTitulo() << "' devolvido em " << dataDevolucao << "\n";
         }
 
     }
