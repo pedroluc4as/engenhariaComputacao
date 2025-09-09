@@ -57,9 +57,13 @@ public:
 
     bool devolver()
     {
-        if(livro == devolvido){
-
+        if(livro && livro->marcarIndisponivel()){
+            livro->estaDisponivel();
+            return true;
         }
+        return false;
+
+        
     }
 
 };
