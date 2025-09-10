@@ -12,7 +12,6 @@ private:
     string isbn, titulo, autor;
     bool disponivel {true};
 
-
 public:
     //construtor é sempre o mesmo nome da classe 
     //com letra maiscula e tem essa cara ai embaixo, com essas chaves
