@@ -4,7 +4,7 @@ Comando "info break" para informar os breakspoints!
 Comando "del n°DoBreakPoint" deleta o breakpoint!
 Comando "display nomeVariavel" seja ela local ou global, informa o valor da variavel!
 
-----------------------FODA--------------------------------------------FODA-------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 Comando "frame" 10 dentro do comando "backtrace full"! Voce volta a chamada na pilha de execução!!!!!!!!!!
 Se voce esta nesse frame 10 por exemplo, se voce executar o comando info locals por exemplo, ser ao comando naquele momento naquele frame!
 Comando "up" avança na pilha, Comando "down" ele volta na pilha! ASSIM VOCE CONSEGUE NAVEGAR ENTRE OS FRAMES SEM TER DE INFORMAR O NUMERO DO FRAME!
@@ -18,7 +18,7 @@ Comando "up" avança na pilha, Comando "down" ele volta na pilha! ASSIM VOCE CON
 #7 --------
 #8 ---------
 #9 ---------- "COMMAND 'up' "
-----------------------fimFODA--------------------------------------------fimFODA--------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 Comando "print" exibe o valor da varivel, já o comando "display" sempre exibira o valor da mesma!
 
