@@ -3,7 +3,8 @@
 
 using namespace std;
 
-class Livro {
+class Livro 
+{
     // modificadores de acesso -> nível de visibilidade dos atributos e métodos
 private:
     //private -> visivel class
@@ -25,7 +26,8 @@ public:
     string getTitulo(){ return titulo; }
 };
 
-class Aluno {
+class Aluno 
+{
 private:
     string ra, nome;
 public:
@@ -34,7 +36,8 @@ public:
      string getNome(){ return nome;}
 };
 
-class Emprestimo {
+class Emprestimo 
+{
 private:
     Livro* livro;
     Aluno* aluno;

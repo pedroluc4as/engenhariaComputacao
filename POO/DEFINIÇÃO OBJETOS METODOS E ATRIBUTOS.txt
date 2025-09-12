@@ -28,7 +28,8 @@ Livro, os atributos que você listou, como "Capa, cor, ano de publicação", sã
 
 Métodos são o quê?
 
-Métodos são as ações, os comportamentos ou as funções que um objeto pode executar. Se os atributos são os substantivos que descrevem o objeto, os métodos são os verbos que dizem o que ele pode fazer.
+Métodos são as ações, os comportamentos ou as funções que um objeto pode executar. 
+Se os atributos são os substantivos que descrevem o objeto, os métodos são os verbos que dizem o que ele pode fazer.
 
 Usando o mesmo exemplo do carro:
 
