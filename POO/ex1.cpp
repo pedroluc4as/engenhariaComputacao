@@ -71,9 +71,14 @@ void test_biblioteca()
     cout << "--- Biblioteca --- \n";
     Livro livro("789-190292", "Prog. Orientada a Objeto", "IFMS");
     Aluno aluno("2025001", "Pedro");
-
     Emprestimo emprestimo(&livro, &aluno, "2025-09-09", "2025-09-15");
+    
+    cout << "Disponível antes: " << (livro.estaDisponivel() ? "sim" : "não") << "\n";
     emprestimo.confirmar();
+
+    cout << "Disponível depois: " << (livro.estaDisponivel() ? "sim" : "não") << "\n";
+    emprestimo.devolver("2025-09-10");
+    
 };
 
 int main()
