@@ -27,7 +27,7 @@ int main(void)
    //p1.ID = 15;
    //*p1.ID = 15;
 
-   (*p1).ID = 15; // (*ponteiro).eleentoStruct = ponteiro->elementoStruct!
+   (*p1).ID = 15; // (*ponteiro).elementoStruct = ponteiro->elementoStruct!
     p2->ID = 5000;
     
     p3->preco = 30;
