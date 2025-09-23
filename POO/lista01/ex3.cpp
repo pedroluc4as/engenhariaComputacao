@@ -14,7 +14,8 @@ public:
     ItemPedido(string produto, int qtdProduto, float precoUni)
     : produto(std::move(produto)), qtdProduto(qtdProduto), precoUni(precoUni) {}
 
-    float getValor() const {
+    float getValor() const 
+    {
         return qtdProduto * precoUni;
     }
 };
@@ -27,7 +28,8 @@ private:
 public:
     Pedido(string id)
     : id(std::move(id)) {}
-    void registrarItem(const ItemPedido& item) {
+    void registrarItem(const ItemPedido& item) 
+    {
         itens.push_back(item);
     }
 
