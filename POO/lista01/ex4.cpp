@@ -59,9 +59,8 @@ public:
 
     void exibir() const 
     {
-        cout << "----------------------------------------" << endl;
         cout << "Prontuário do Paciente: " << paciente->getNome() << endl;
-        cout << "Médico Responsável: Dr(a). " << medico->getNome() << endl;
+        cout << "Médico Responsável: Dr " << medico->getNome() << endl;
         cout << "Anotações:" << endl;
 
         if (anotacoes.empty()) 
@@ -76,13 +75,12 @@ public:
                 nota.exibir();
             }
         }
-        cout << "----------------------------------------" << endl;
     }
 };
 
 int main() {
-    Medico medico1("Ana Beatriz", "idMed-12345");
-    Paciente paciente1("Carlos Silva", "111.222.333-44");
+    Medico medico1("Ana", "idMed-12345");
+    Paciente paciente1("Carlos", "111.222.333-44");
 
     Prontuario prontuario1(&paciente1, &medico1);
 

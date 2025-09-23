@@ -97,10 +97,9 @@ public:
 
     void exibirFrota() const 
     {
-        cout << "======= Frota da Empresa: " << nome << " =======" << endl;
+        cout << "Frota da Empresa: " << nome << endl;
         for (const auto& onibus : frota) {
             onibus.exibir();
-            cout << "----------------------------------------" << endl;
         }
     }
 };

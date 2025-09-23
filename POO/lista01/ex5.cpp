@@ -72,9 +72,7 @@ public:
 
     void exibir() const 
     {
-        cout << "========================================" << endl;
         cout << "Curso: " << nome << endl;
-        cout << "----------------------------------------" << endl;
 
         if (turmas.empty()) 
         {
@@ -88,25 +86,24 @@ public:
                 turma.exibir();
             }
         }
-        cout << "========================================" << endl;
     }
 };
 
 int main() {
-    Professor prof1("Ricardo", "Computação");
-    Aluno aluno1("João", "2025111");
-    Aluno aluno2("Maria", "2025112");
-    Aluno aluno3("José", "2025113");
+    Professor prof1("Beto", "Computação");
+    Aluno aluno1("Pedro", "2025111");
+    Aluno aluno2("Isadora", "2025112");
+    Aluno aluno3("Bruno", "2025113");
 
-    Turma turmaPOO("TAD030", &prof1);
+    Turma turmaPOO("EngComputacao03", &prof1);
     turmaPOO.adicionarAluno(&aluno1);
     turmaPOO.adicionarAluno(&aluno2);
     turmaPOO.adicionarAluno(&aluno3);
     
-    Curso cursoTADS("Tecnologia em Análise e Desenv. de Sistemas");
-    cursoTADS.adicionarTurma(turmaPOO);
+    Curso cursoENG("Engenharia de Computação");
+    cursoENG.adicionarTurma(turmaPOO);
 
-    cursoTADS.exibir();
+    cursoENG.exibir();
 
     return 0;
 }

@@ -97,10 +97,9 @@ public:
 
     void exibir() const 
     {
-        cout << "--- Jogador: " << nome << " ---" << endl;
+        cout << "Jogador: " << nome << endl;
         cout << "  Inventário:" << endl;
         inventario.exibir();
-        cout << "------------------------" << endl;
     }
 };
 
@@ -119,7 +118,7 @@ public:
 
     void exibir() const 
     {
-        cout << "--- Inimigo: " << tipo << " ---" << endl;
+        cout << "Inimigo: " << tipo << " ---" << endl;
 
         if (armaEquipada) 
         {
@@ -132,23 +131,22 @@ public:
         {
             cout << "  (Desarmado)" << endl;
         }
-        cout << "------------------------" << endl;
     }
 };
 
 int main() {
-    Item pocao("Poção de Cura");
+    Item pocao("Poção de Cura (2x)");
     Arma espada("Espada de Ferro", 10);
-    Arma machado("Machado de Guerra", 15);
+    Arma machado("Machado de Diamante", 15);
 
-    Jogador heroi("Aragorn");
+    Jogador heroi("Steve");
     heroi.coletarItem(pocao);
     heroi.coletarArma(espada);
     heroi.exibir();
 
-    Inimigo orc("Orc Grunt");
-    orc.equiparArma(&machado); 
-    orc.exibir();
+    Inimigo esqueleto("Esqueleto na Aranha");
+    esqueleto.equiparArma(&machado); 
+    esqueleto.exibir();
 
     return 0;
 }

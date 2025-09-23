@@ -86,7 +86,7 @@ public:
     : itensComprados(carrinho.getItens()), infoPagamento(info), valorTotal(carrinho.calcularTotal()) {}
 
     void exibir() const {
-        cout << "=============== PEDIDO GERADO ===============" << endl;
+        cout << "PEDIDO GERADO" << endl;
         cout << "  Método de Pagamento: " << infoPagamento.getMetodo() << endl;
         cout << "  Itens do Pedido:" << endl;
 
@@ -94,9 +94,7 @@ public:
         {
             item.exibir();
         }
-        cout << "  -------------------------------------------" << endl;
         cout << "  VALOR TOTAL: R$" << valorTotal << endl;
-        cout << "===========================================" << endl;
     }
 };
 
@@ -112,7 +110,7 @@ int main() {
     meuCarrinho.adicionarProduto(&p2, 2);
 
     cout << "Total no carrinho: R$" << meuCarrinho.calcularTotal() << endl;
-    cout << "\n... Finalizando a compra ...\n\n";
+    cout << "\n... Finalizando a compra\n\n";
 
     // 2. Cliente fornece as informações de pagamento
     InformacoesPagamento pgto("Cartão de Crédito");
