@@ -69,8 +69,6 @@ public:
     }
 };
 
-// ---------------------------
-// Teste
 int main() {
     Usuario u1("001", "Sperandio");
     Perfil perfil(&u1);
