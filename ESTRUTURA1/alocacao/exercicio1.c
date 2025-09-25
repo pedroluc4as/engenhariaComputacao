@@ -5,23 +5,29 @@
 
 int main()
 {
-    int *inteiros;
+    int *vetorInteiros;
     int cont = 0;
 
-    inteiros = malloc (10000000 * sizeof(int));
+    vetorInteiros = malloc (TAMANHO * sizeof(int));
 
-    inteiros[1] = 3;
+    vetorInteiros[1] = 3;
 
     for(int i = 0; i < TAMANHO; i++)
     {
-        if(inteiros[i] == 0)
+        if(vetorInteiros[i] == 0)
         {
             cont++;
         }
+        if (cont == TAMANHO)
+        {
+            printf("todas as posições zeradas!\n");
+        }
+        
     }
-    printf("%d\n",cont);
+    printf("quantidade de posições zeradas = %d \n",cont);
 
-    free(inteiros);
+    free(vetorInteiros);
+    vetorInteiros = NULL;
     
     return 0;
 }
