@@ -10,7 +10,7 @@ int main()
 
     vetorInteiros = malloc (TAMANHO * sizeof(int));
 
-    vetorInteiros[1] = 3;
+   // vetorInteiros[1] = 3;
 
     for(int i = 0; i < TAMANHO; i++)
     {
