@@ -13,6 +13,7 @@ public:
     Produto(string nome, float preco)
     : nome(std::move(nome)), preco(preco) {}
 
+    ~Produto(){cout << "destruído:'" << nome << "\n'";};
     string getNome() const { return nome; }
     float getPreco() const { return preco; }
 };
