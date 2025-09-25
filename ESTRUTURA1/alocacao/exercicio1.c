@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define tamnho 10000000
+
+#define TAMANHO 10000000
+
 int main()
 {
     int *inteiros;
@@ -10,7 +12,7 @@ int main()
 
     inteiros[1] = 3;
 
-    for(int i = 0; i < tamnho; i++)
+    for(int i = 0; i < TAMANHO; i++)
     {
         if(inteiros[i] == 0)
         {
