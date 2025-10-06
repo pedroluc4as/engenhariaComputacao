@@ -18,3 +18,4 @@ void  lista_TresNosEstaticos();
 
 #endif
 
+//AQUI TEMOS SOMENTE A DECLARAÇÃO DO TIPO DE VARIÁVEL, NÃO À VARIÁVEL EM SIM
