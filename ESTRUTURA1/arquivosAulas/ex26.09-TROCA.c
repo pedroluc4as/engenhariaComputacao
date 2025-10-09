@@ -20,3 +20,5 @@ int main()
 
     return 0;
 }
+
+//uma variavel ponteiro é uma referencia para uma regiao de memoria
