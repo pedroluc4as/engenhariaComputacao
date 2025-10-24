@@ -9,7 +9,7 @@ class Reta : public FiguraGeometrica //HERANÇA
 {
 public:
     Reta();
-    void draw();
+    void draw() override;
 };
 
 #endif

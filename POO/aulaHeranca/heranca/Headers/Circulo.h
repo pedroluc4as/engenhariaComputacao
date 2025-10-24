@@ -9,7 +9,7 @@ class Circulo : public FiguraGeometrica //HERANÇA
 {
 public:
     Circulo();
-    void draw();
+    void draw() override;
 };
 
 #endif
