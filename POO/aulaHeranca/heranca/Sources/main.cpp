@@ -3,14 +3,13 @@
 #include <Circulo.h>
 int main()
 {
-    FiguraGeometrica  fig, *rfig, *cfig;
+    FiguraGeometrica *rfig, *cfig;
     Reta reta;
     Circulo circulo;
 
     rfig = &reta;
     cfig = &circulo;
 
-    fig.draw();
     rfig->draw();
     cfig->draw();
 

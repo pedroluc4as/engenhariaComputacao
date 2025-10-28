@@ -13,7 +13,7 @@ public:
     FiguraGeometrica();
     virtual ~FiguraGeometrica();
 
-    virtual void draw();
+    virtual void draw() = 0;
 };
 
 #endif

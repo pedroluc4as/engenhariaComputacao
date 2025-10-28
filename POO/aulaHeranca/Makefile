@@ -9,7 +9,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -g
 
 # Diretório padrão (pode ser sobrescrito com DIR=pasta)
-DEFAULT_DIR = heranca
+DEFAULT_DIR = compEletro
 DIR ?= $(DEFAULT_DIR)
 
 # Diretórios

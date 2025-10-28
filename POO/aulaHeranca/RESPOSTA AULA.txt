@@ -1,0 +1,3 @@
+se voce tem algum método virtual, 
+voce tem de ter um destrutor virtual, 
+entao eu adicionei o destrutor virtual na classe figurageometrica.cpp
