@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include <time.h>  // nanosleep
+#include <time.h>  //nanosleep
 
 void delay_ms(unsigned int ms);
 
