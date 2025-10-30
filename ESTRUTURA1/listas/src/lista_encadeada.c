@@ -119,8 +119,20 @@ struct ListaEnc *le_CriaLista()
     // inicializa a lista
     // retorna a lista
 
+    struct ListaEnc * lista;
 
+    lista = (struct ListaEnc *) malloc(1 * sizeof(struct ListaEnc));
 
+    if (lista == NULL)
+    {
+        ec_imprimirCor("Não foi possível alocar memória para lista", "RED");
+        return lista;
+    }
+    
+    lista->cabeca = NULL;
+    lista->quantidade = 0;
+    
+    return lista;
 }
 
 static int le_ListaNaoInicializada(struct ListaEnc *lista)
@@ -128,6 +140,13 @@ static int le_ListaNaoInicializada(struct ListaEnc *lista)
     // se lista não estiver inicializada, mensagem em amarelo
     // retornar 0 ou 1 dependendo do caso 
 
+    if (lista == NULL)
+    {
+        ec_imprimirCor("Lista NÃO inicializada!", "Y");
+        return 1;
+    }
+
+    return 0;
 }
 
 int le_TamanhoLista(struct ListaEnc *lista, int imprime)
@@ -136,7 +155,17 @@ int le_TamanhoLista(struct ListaEnc *lista, int imprime)
     // opção para imprimir ou ão quantidade de elementos da lista
     // caso a tratar: lista não inicializada
     
+    if(le_ListaNaoInicializada(lista))
+    {
+        return 0;
+    }
 
+    if (imprime == 1)
+    {
+        ec_imprimirCor("Quantidade de elementos da lista: %d","Y", lista->quantidade);
+    }
+
+    return lista->quantidade;
 }
 
 
