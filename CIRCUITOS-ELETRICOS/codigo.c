@@ -69,14 +69,14 @@ void loop()
     }
 
     //condição corrente da direita para a esquerda (< -70uA)
-    else if (corrente_uA < -70.0)
+    if (corrente_uA < -70.0)
     {
         digitalWrite(ledVermelho, HIGH);
         Serial.println("Corrente da D -> E");
     }
 
     //condição corrente da esquerda para a direita (> +70uA)
-    else if (corrente_uA > 70.0)
+    if (corrente_uA > 70.0)
     {
         digitalWrite(ledVerde, HIGH);
         Serial.println("Corrente da E -> D");
