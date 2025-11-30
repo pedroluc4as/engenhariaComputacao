@@ -1,0 +1,128 @@
+1- a) COMPOSIÇÃO: É o tipo de associação em que você faz a manipulação dos atributos nela presente sem depender de atributos de outras classes. A composição é um tipo de associação independente.
+
+AGREGAÇÃO: É um tipo de associação onde você precisar “chamar” objetos de outra classe para que você torne aquela classe “coerente” e funcional com o problema que você tem de implementar, a chamada de um atributo de outra classe é feita pelo uso de ponteiros. A agregação é um tipo de associação que depende de um atributo de outra classe.
+
+b) Temos uma classe Aluno (CPF, nome, idade, endereço e RA), e esse aluno possui uma conta em uma instituição financeira (idBanco, idConta, valorReais), essa pessoa irá participar de um processo seletivo para o cadastro reserva de auxílio moradia do IFMS. O IFMS não tem acesso á conta bancaria do aluno e possui os seguintes atributos: nome, endereco, id, patrimonio e listaAuxilios.
+	Teremos a classe aluno com os atributos string CPF, nome, idade, endereco, RA, a classe Instituicao_Financeira com os atributos string idBanco, idConta e int valorReais, a classe IFMS com string endereco, id; int patrimonio e um vetor listaAuxilios. Para o cadastro do aluno na lista reserva do auxilio o IFMS precisa ter acesso ao idBanco e idConta do aluno, porém esses dados estão encapsulados, para que o IFMS tenha acesso a esses dados ele precisa utilizar um ponteiro para a classe Instituicao_Financeira, que é a associação por agregação, onde IFMS necessita de Instituicao_Financeira para conseguir atingir seu objetivo de cadastrar o Aluno na listaAuxilios. Também como o IFMS necessita de Instituicao_Financeira, a Instituicao_Financeira necessita de quase todos os atributos de Aluno, assim também sendo associação por composição.
+	Para o exemplo de composição podemos imaginar o seguinte cenário, alguém possui um carro(placa, cor, modelo), uma casa(numero, cor, bairro, cidade) e um celular(modelo, marca, cor). Uma pessoa necessita usar seu carro para ir até a sua casa buscar o carregador para seu celular que descarregou, percebe que nenhuma classe depende da outra, aqui temos a associação por composição, onde uma classe não depende da outra.
+
+c) Agregação eu representaria utilizando ponteiros, por exemplo temos uma clase Pessoa, e uma classe Banco, utilizaria em banco a agregação dessa forma: *Pessoa;
+Em composição utilizaria objeto por valor, 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2- a) Classes: 
+    1. Clientes;
+    2. Reservas;
+    3. Veículo;
+    4. Frota;
+    5. Itens de Cobrança;
+    6. Funcionários.
+Principais atributos de cada classe:
+    • Classe Clientes:
+    1. id;
+    2. nome;
+    3. endereco;
+    4. contaBancaria;
+    5. empresa;
+    6. idade;
+    7. telefone.
+
+
+
+    • Classe Reservas:
+    1. id;
+    2. dataRetirada;
+    3. dataDevolucao;
+    4. numeroReserva;
+    5. *Cliente;
+    6. *Itens_de_Cobranca;
+    7. *Veiculo.
+
+    • Classe Veículo:
+    1. *Cliente;
+    2. *Reserva
+    3. Cor;
+    4. Ano;
+    5. Modelo;
+    6. Valor;
+    7. Marca.
+
+    • Classe Frota:
+    1. *Veiculo;
+    2. *Cliente;
+    3. Placa;
+    4. Modelo;
+    5. Categoria.
+
+    • Classe Itens de Cobrança:
+    1. Diaria;
+    2. GPS;
+    3. cadeira_infantil;
+    4. Quantidade;
+    5. valor_unitario.
+       
+    • Classe Funcionários:
+    1. *Reservas;
+    2. id;
+    3. Nome;
+    4. Cargo;
+    5. Permissao.
+
+Responsabilidades (métodos):
+    • Clientes
+    1. escolherVeiculo;
+    2. reservarVeiculo;
+    3. efetuarPagamento;
+      
+    • Reservas
+    1. registrarRetiradaVeiculo;
+    2. registrarDevolucaoVeiculo;
+    3. verificarVeiculoDisponivel;
+    4. reservarVeiculo;
+    5. registroFrota;
+    • Veículo
+    1. getCliente;
+    2. verificarDisponibilidaeFrota;
+
+    • Frota
+    1. alterarDisponibilidade;
+    2. registrarVeiculo;
+    3. alterarDados;
+
+    • Itens de Cobrança:
+    1. getReserva;
+    2. cobrarCliente;
+
+    • Funcionários:
+    1. verificarReserva;
+    2. verificarFrota;
+
+
+c) Clientes;
+    1. Reservas → Agregação.
+    2. Veículo → Agregação;
+    3. Frota → Agregação;
+    4. Itens de Cobrança → Composição;
+    5. Funcionários → Agregação.
+
+
