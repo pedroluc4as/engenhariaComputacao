@@ -45,8 +45,6 @@ void le_ImprimeLista(struct ListaEnc *lista);
 struct Estudante le_BuscaChave(struct ListaEnc *lista, char *chave);
 struct Estudante le_RemoveChave(struct ListaEnc *lista, char *chave);
 
-// EM PRODUÇÃO le_EnderecosNos DEVE ser privada
-// colocá-la no .c
 void le_EnderecosNos(struct ListaEnc *lista);
 
 #endif

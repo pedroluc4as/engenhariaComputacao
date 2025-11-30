@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include <time.h>  //nanosleep
+#include <time.h>  // nanosleep
 
 void delay_ms(unsigned int ms);
 
@@ -32,8 +32,6 @@ int le_InsereListaOrdenada2(struct ListaEnc *lista, struct Estudante e);
 void le_ImprimeLista(struct ListaEnc *lista);
 void le_EstudantesArquivo(struct ListaEnc *lista);
 
-
-//IMPLEMENTAÇÃO
 static struct Estudante le_criaEstudante()
 {
     struct Estudante e = {0, 0, ""};
@@ -125,13 +123,13 @@ struct ListaEnc *le_CriaLista()
 
     if (lista == NULL)
     {
-        ec_imprimirCor("Não foi possível alocar memória para lista", "RED");
-        return lista;
+        ec_imprimirCor("NÃO foi possível alocar memória para a lista", "RED");
+        return NULL;
     }
-    
+
     lista->cabeca = NULL;
     lista->quantidade = 0;
-    
+
     return lista;
 }
 
@@ -142,7 +140,7 @@ static int le_ListaNaoInicializada(struct ListaEnc *lista)
 
     if (lista == NULL)
     {
-        ec_imprimirCor("Lista NÃO inicializada!", "Y");
+        ec_imprimirCor("Lista não inicializada!", "Y");
         return 1;
     }
 
@@ -154,15 +152,16 @@ int le_TamanhoLista(struct ListaEnc *lista, int imprime)
     // retorna a quantidade de elementos da lista
     // opção para imprimir ou ão quantidade de elementos da lista
     // caso a tratar: lista não inicializada
-    
-    if(le_ListaNaoInicializada(lista))
+
+    if (le_ListaNaoInicializada(lista))
     {
         return 0;
     }
 
     if (imprime == 1)
     {
-        ec_imprimirCor("Quantidade de elementos da lista: %d","Y", lista->quantidade);
+        ec_imprimirCor("Quantidade de elementos da lista: %d", 
+            "Y", lista->quantidade);
     }
 
     return lista->quantidade;
@@ -175,6 +174,13 @@ int le_ListaVazia(struct ListaEnc *lista)
     // retorna 1 ou 0, dependendo se a lista está ou não vazia
     // caso a tratar: lista não inicializada
 
+    if(le_ListaNaoInicializada(lista) || lista->quantidade == 0)
+    {
+        ec_imprimirCor("Lista não inicializada!\n", "Y");
+        return 1;
+    }
+
+    return 0;
 }
 
 int le_ListaCheia(struct ListaEnc *lista)
@@ -186,13 +192,47 @@ int le_InsereListaInicio2(struct ListaEnc *lista, struct Estudante e)
     // alocar no, e validar se conseguiu
     // armazenar dados do estudante
     // caso a tratar: lista não inicializada
-    
-}
 
+    if(le_ListaNaoInicializada(lista))
+    {
+        return 0;
+    }
+    
+    struct No *no = (struct No *) malloc(1 * sizeof(struct No));
+
+    if(no == NULL)
+    {
+        ec_imprimirCor("Não foi possível alocar memória para o nó!\n", "R");
+        return 0;
+    }
+    no->estudante = e;
+    no->proximo = lista->cabeca;
+    lista->cabeca = no;
+}
 
 int le_InsereListaInicio(struct ListaEnc *lista)
 {
+    if(le_ListaNaoInicializada(lista))
+    {
+        return 0;
+    }
 
+    ec_imprimirCor("Inserção no início da lista\n", "G");
+    ec_imprimirCor("Informe os dados dos estudntes\n", "G");
+    ec_imprimirCor("ID 0 para finalizar!\n", "Y");
+
+    struct Estudante e;
+
+    do
+    {
+        e = le_LeEstudante();
+        if(e.ID == 0) break;
+        
+        le_InsereListaInicio2(lista, e);
+    } while (e.ID > 0);
+
+    return 1;
+    
 }
 
 
