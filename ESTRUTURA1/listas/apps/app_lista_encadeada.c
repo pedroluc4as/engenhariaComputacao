@@ -19,7 +19,7 @@ int main(void)
     {
         opcao = menu();
         executa(opcao, &lista);
-    } while (opcao >0);
+    } while (opcao > 0);
 
     le_DestroiLista(&lista);
 
@@ -43,6 +43,7 @@ int menu()
     printf("7   - Remover elemento(s) da lista\n");
     printf("8   - Importar dados arquivo notas.csv\n");
     printf("9   - Remover todos os elementos da lista\n");
+    printf("10  - Buscar com Retroativo (Item 3.1)\n"); 
     printf("99  - AUX: ec_imprimirTodasAsCores\n");
     printf("100 - Destruir a lista\n");
     ec_imprimirCor("============================================================\n", "E");
@@ -56,6 +57,7 @@ void executa(int opcao, struct ListaEnc **lista )
 {
     char chave[40];
     struct Estudante e;
+    int n_retro;
 
     switch (opcao)
     {
@@ -69,12 +71,15 @@ void executa(int opcao, struct ListaEnc **lista )
             le_InsereListaFim(*lista); break;
         case 5:
             le_InsereListaOrdenada(*lista); break;            
-        case 6: case 7: // dois casos tratados juntos
+        case 6: case 7: 
             do
             {
                 printf("Informe a chave de busca (0 para finalizar): ");
                 getchar();
                 scanf("%[^\n]", chave);
+                
+                if (strcmp(chave, "0") == 0) break;
+
                 if (opcao == 6)
                     e = le_BuscaChave(*lista, chave);
                 else e = le_RemoveChave(*lista, chave);
@@ -89,6 +94,10 @@ void executa(int opcao, struct ListaEnc **lista )
                     printf("%.2f\t", e.nota);
                     printf("%s\n", e.nome);
                 }
+                else 
+                {
+                    ec_imprimirCor("Estudante não encontrado.\n", "R");
+                }
                 
             } while (strcmp(chave, "0")!= 0);
 
@@ -100,13 +109,19 @@ void executa(int opcao, struct ListaEnc **lista )
         case 9:
             le_RemoveTodos(*lista, 1);
             break;
+        
+        case 10: 
+            printf("Informe a chave de busca: ");
+            getchar();
+            scanf("%[^\n]", chave);
+            printf("Quantos anteriores deseja imprimir? ");
+            scanf("%d", &n_retro);
+            le_BuscaImprimeRetroativo(*lista, chave, n_retro);
+            break;
 
         case 99:
             ec_imprimirTodasAsCores(50);break;
         case 100:
             le_DestroiLista(lista);
-
-
     }
-
 }

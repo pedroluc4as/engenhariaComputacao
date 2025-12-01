@@ -47,5 +47,7 @@ struct Estudante le_RemoveChave(struct ListaEnc *lista, char *chave);
 
 void le_EnderecosNos(struct ListaEnc *lista);
 
+void le_BuscaImprimeRetroativo(struct ListaEnc *lista, char *chave, int n);
+
 #endif
 
